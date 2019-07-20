@@ -22,9 +22,13 @@ var dateToString = today.toLocaleDateString('en-US', options);
 app.get('/', (req, res)=>{
     //Another Way
     res.render('list', {todaynow: dateToString});
- 
-
    
+});
+
+app.post('/', (req,res)=>{
+    
+    var postedItem = req.body.item;
+    res.render('list', {itemm :postedItem}); 
 });
 
 

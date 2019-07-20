@@ -8,13 +8,24 @@
     <title>ToDo List App</title>
 </head>
 <body>
+    <div class="todo-list">
 
-    <% if (todaynow==='Saturday' || todaynow==='Sunday'){ %>
+        <h1 style="color:black;">ToDo List <br> <%= todaynow %> </h1>
 
-        <h1 style="color: blue;">ToDo List For <%= todaynow %> </h1>
-   <% }else{ %>
-         <h1 style="color:green;"> ToDo List For <%= todaynow %></h1>
-    <% }; %>
+        <ul>
+            <li id="items"> <%= itemm %> </li>
+            <li id="items">Rice</li>
+            <li id="items">Fish</li>
+            <li id="items">Ramen</li>
+        </ul>
 
+        <form action="/" method="post">
+            <input type="text" name="item" id="post-item">
+            <input type="button" value="Submit">
+        
+        </form>
+    </div>
+
+  
 </body>
 </html>
