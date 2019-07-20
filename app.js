@@ -29,7 +29,8 @@ app.post('/', (req,res)=>{
     
     var postedItem = req.body.item;
     console.log(postedItem);
-    // res.render('list', {itemadd : postedItem});
+
+    // res.render( "list", {itemi : postedItem});
 });
 
 
