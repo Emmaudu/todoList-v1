@@ -28,7 +28,8 @@ app.get('/', (req, res)=>{
 app.post('/', (req,res)=>{
     
     var postedItem = req.body.item;
-    res.render('list', {itemm :postedItem}); 
+    console.log(postedItem);
+    res.render('list', {item : postedItem});
 });
 
 
