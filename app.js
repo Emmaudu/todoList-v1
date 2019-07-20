@@ -4,7 +4,7 @@ const ejs = require('ejs');
 
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
-app.set('view-engine', 'ejs');
+app.set('view engine', 'ejs');
 
 const port = process.env.PORT || 3000;
 
