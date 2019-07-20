@@ -8,7 +8,13 @@
     <title>ToDo List App</title>
 </head>
 <body>
-    <h1>Today is a <%= todaynow %> </h1>
-    
+
+    <% if (todaynow==='Saturday' || todaynow==='Sunday'){ %>
+
+        <h1 style="color: blue;"><%= todaynow %> ToDo List</h1>
+   <% }else{ %>
+         <h1 style="color:green;"><%= todaynow %> ToDo List</h1>
+    <% }; %>
+
 </body>
 </html>
