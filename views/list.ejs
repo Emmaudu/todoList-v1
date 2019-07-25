@@ -5,25 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ToDo List App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>My Reminder</title>
+    
 </head>
 <body>
-    <div class="todo-list">
 
-        <h1 style="color:black;">ToDo List <br> <%= todaynow %> </h1>
+    <form class="form-signin" action="/" method="post">
 
-        <ul>
-            <li id="items"></li>
-            <li id="items">Fish</li>
-            <li id="items">Ramen</li>
-        </ul>
+        <div class="form-signin">
 
-        <form action="/" method="post">
-            <input type="text" name="item" id="post-item">
-            <button>Add</button>
+            <h1 style="color:black;">ToME: <%= todaynow %> </h1><br>
+
+            <ul>
+               <% for(i=0; i<items.length; i++){ %>
+
+                    <!-- <h5>Reminder: {</h5> -->
+                    <li><%= items[i]  %> <br> </li>
+                    <!-- <h5>}</h5> -->
+             <% } %>
+                
+
+            </ul>
+
+        </div>
+
+              <div class="form-label-group">
+                <!-- Write Reminder: -->
+                <input type="text" class="form-control" name="item" placeholder="Add Reminder" required autofocus><br>
+
+                <input type="email" class="form-control" name="email" placeholder="Email Address" required autofocus><br>
+
+                <input type="date" class="form-control" name="date" placeholder="" required autofocus><br>
+
+                Set Time:
+                <input type="time" class="form-control" name="time" placeholder="" required autofocus><br>
+            
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Add</button>
+
+                 <p class="mt-5 mb-3 text-muted text-center">&copy; Emmanuel Uduebholo</p>
+              </div>
+
+              
+
         
-        </form>
-    </div>
+        
+    </form>
+    
 
   
 </body>
